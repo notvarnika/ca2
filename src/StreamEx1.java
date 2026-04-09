@@ -3,12 +3,15 @@ import java.util.Arrays;
 
 public class StreamEx1 {
     public static void main(String[] args) {
+
+        //1. Divisible by 3 but not 5
         ArrayList<Integer> a = new ArrayList<>();
         a.add(1);
         a.add(2);a.add(3);a.add(4);a.add(5);a.add(6);a.add(7);a.add(8);
         a.add(102);a.add(105);a.add(100);a.add(19);a.add(18);a.add(16);a.add(15);a.add(12);
         a.stream().filter(n->n%3==0 && n%5!=0).forEach(System.out::println);
 
+        // 2. Names ending with 'n'
         ArrayList<String> s = new ArrayList<>();
         s.add("VARN");
         s.add("SOMILN");
@@ -17,6 +20,7 @@ public class StreamEx1 {
         s.add("pie");
         s.stream().filter(n->n.endsWith("N")).forEach(System.out::println);
 
+        // 3. Employees salary > 50,000
         ArrayList<Integer> salary = new ArrayList<>();
         salary.add(1000000);
         salary.add(50000);
@@ -24,6 +28,7 @@ public class StreamEx1 {
         salary.add(10);
         salary.stream().filter(n->n>50000).forEach(System.out::println);
 
+        // 4. Strings containing 'e'
         ArrayList<String> d = new ArrayList<>();
         d.add("dede");
         d.add("jojeo");
@@ -31,6 +36,7 @@ public class StreamEx1 {
         d.add("vaeda");
         d.stream().filter(n-> n.contains("e")).forEach(System.out::println);
 
+        // 5. Prime numbers
         ArrayList<Integer> p = new ArrayList<>();
         p.add(2);
         p.add(3);
@@ -42,12 +48,14 @@ public class StreamEx1 {
         p.stream().filter(n->isPrime(n)).forEach(System.out::println);
 
 
+        // 6. Square greater than 500
         ArrayList <Integer> o = new ArrayList<>(Arrays.asList(12,34,56,2,3,4,5,19));
         o.stream()
                 .filter(k -> k * k > 500)
                 .forEach(System.out::println);
 
 
+        // 7. Valid emails
         ArrayList<String> emails = new ArrayList<>(Arrays.asList(
                 "varnika@gmail.com",
                 "somiln@yahoo",
